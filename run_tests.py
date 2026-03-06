@@ -1,3 +1,7 @@
-import os
+import subprocess
+import sys
 
-os.system("pytest tests --html=report.html")
+subprocess.run(
+    [sys.executable, "-m", "pytest", "tests", "--html=report.html"],
+    check=True
+)
